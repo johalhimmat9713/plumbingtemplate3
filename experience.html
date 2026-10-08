@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171b18">
+  <title>The Experience | Your Plumbing Company</title>
+  <meta name="description" content="Clear answers, careful work, and a considered residential plumbing experience for Contra Costa County homes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="interior.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="topline">Residential plumbing, thoughtfully done · <a href="tel:(000)000-0000">Contra Costa County, including Pittsburg &amp; Antioch · (000)000-0000</a></div>
+  <header class="site-header"><div class="container nav-wrap">
+    <a class="wordmark" href="index.html" aria-label="Your Plumbing Company, home"><strong>Your Plumbing</strong><span>COMPANY</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu"><span class="menu-icon" aria-hidden="true"></span></button>
+    <nav aria-label="Main navigation"><ul class="nav-links" id="primary-navigation">
+      <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About us</a></li><li><a href="experience.html" aria-current="page">The experience</a></li><li><a class="nav-cta" href="contact.html">Let’s talk</a></li>
+    </ul></nav>
+  </div></header>
+  <main id="main">
+    <section class="page-intro"><div class="container">
+      <p class="eyebrow">THE COMPANY DIFFERENCE</p>
+      <h1>Good service should feel like a deep breath.</h1>
+      <p class="lede">From the first hello to the final walkthrough, we make the process feel considered, clear, and genuinely easy to be part of.</p>
+    </div></section>
+    <section class="page-content"><div class="container feature-grid">
+      <figure><div class="feature-photo"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="Thoughtfully finished shower with modern fixtures" loading="lazy"></div><figcaption class="caption">A BETTER KIND OF EVERYDAY</figcaption></figure>
+      <div class="feature-copy"><p class="eyebrow">THE COMPANY DIFFERENCE</p><h2 class="content-heading">Clear, considered, and easy to be part of.</h2><p>We bring clear answers and careful work to taking care of home. We listen first, explain your options, and treat your space with real respect.</p><a class="button" href="contact.html">Get to know us <span aria-hidden="true">↗</span></a></div>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="container">
+    <div class="footer-main">
+      <div class="footer-brand"><a class="wordmark" href="index.html" aria-label="Your Plumbing Company, home"><strong>Your Plumbing</strong><span>COMPANY</span></a><p>Good work, good people, and a little more ease at home.</p></div>
+      <div><h2 class="footer-heading">NEED A HAND?</h2><div class="footer-contact"><a href="tel:(000)000-0000">(000)000-0000</a><a href="mailto:hello@yourplumbingcompany.example">hello@yourplumbingcompany.example</a></div></div>
+      <div><h2 class="footer-heading">SERVICE AREA</h2><div class="footer-contact"><span>Serving Contra Costa County, including Pittsburg and Antioch</span></div></div>
+      <nav aria-label="Footer navigation"><h2 class="footer-heading">EXPLORE</h2><div class="footer-nav"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About us</a><a href="experience.html">The experience</a><a href="contact.html">Contact</a></div></nav>
+    </div>
+    <div class="footer-bottom"><span>© <span class="current-year"></span> Your Plumbing Company</span><span class="footer-signoff">MADE FOR THE PLACE WE CALL HOME</span></div>
+    <p class="photo-credit">“Plumber under kitchen sink” by MoToMo, <a href="https://commons.wikimedia.org/w/index.php?curid=142505641">Wikimedia Commons</a>, licensed under <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>.</p>
+  </div></footer>
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('#primary-navigation');
+    menuButton.addEventListener('click', () => {
+      const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isExpanded));
+      menuButton.setAttribute('aria-label', isExpanded ? 'Open navigation menu' : 'Close navigation menu');
+      navigation.classList.toggle('is-open', !isExpanded);
+    });
+    navigation.addEventListener('click', (event) => {
+      if (event.target.closest('a')) {
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Open navigation menu');
+        navigation.classList.remove('is-open');
+      }
+    });
+    document.querySelectorAll('.current-year').forEach((year) => { year.textContent = new Date().getFullYear(); });
+  </script>
+</body>
+</html>
